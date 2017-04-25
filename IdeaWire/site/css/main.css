@@ -1,0 +1,481 @@
+/*---------------html och body------------ */
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #303030;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* -------------html and body end------ */
+
+
+/* ---------------burger------------- */
+
+@keyframes dropHeader {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.burger {
+    position: fixed;
+    background-color: #303030;
+    width: 75%;
+    height: 100%;
+    z-index: 3;
+    -webkit-box-shadow: 0px 0px 218px 114px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 218px 114px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 218px 114px rgba(0, 0, 0, 0.75);
+    border-right: 2px solid black;
+    display: none;
+    flex-direction: column;
+    animation-name: dropHeader;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-duration: 0.3s;
+}
+
+.close_burger {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+ul {
+    list-style-type: none;
+    font-size: 20px;
+}
+
+li {
+    display: flex;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.material-icons {
+    color: white;
+    margin-right: 20px;
+}
+
+.burger-js {
+    display: flex;
+}
+
+
+/* ----------------burger end----------- */
+
+
+/* -----------nav-------------------- */
+
+nav {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #212121;
+    width: 100%;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    z-index: 2;
+}
+
+.hmeny {
+    margin: 20px;
+    height: 24px;
+    width: 24px;
+}
+
+
+/* ------------naven end--------------- */
+
+
+/* -------------content--------- */
+
+.outer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 84px;
+    z-index: 1;
+}
+
+.outer2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 134px;
+    z-index: 1;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+aside {
+    background-color: #424242;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    margin-bottom: 20px;
+    color: white;
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+article {
+    display: flex;
+    flex-direction: row;
+    background-color: #424242;
+    color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    margin-bottom: 10px;
+}
+#top {
+    margin-top: 0;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.upper {
+    flex-grow: 9;
+    color: rgb(189, 189, 189);
+}
+
+.lower {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+.img_article {
+    margin: 10px;
+}
+
+#bot {
+    margin-bottom: 20px;
+}
+
+.nav_download {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.nav_download_buttons, .store_button {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+menuitem {
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid #212121;
+}
+
+#active {
+    border-bottom: 2px solid rgb(3, 208, 255);
+}
+
+.nav_mobile {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav_mobile_left {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+}
+
+.nav_mobile_right {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 50%;
+}
+
+section {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+section::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.column_to_row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column_to_row2 {
+    display: flex;
+    flex-direction: row;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    background-color: #424242;
+    color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    margin: 0;
+    margin-top: 40px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    width: 33%;
+    cursor: pointer;
+}
+
+.figure_img {
+    margin: 6px;
+    margin-bottom: 0;
+}
+
+#marginfix {
+    margin: 0;
+}
+
+.settings {
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+
+footer {
+    height: 40px;
+    width: 100%;
+    background-color: #212121;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.footer_box1 {
+    width: 50%;
+}
+
+.footer_box2 {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.footer_ikoner {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.footerfix {
+    position: relative;
+}
+
+.about_us_img {
+    margin-left: 10px;
+    width: 470px;
+    height: 300px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.about_us {
+    display: flex;
+    justify-content: center;
+}
+
+.about_us_titel {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.length_fix {
+    width: 50%;
+}
+
+.center_to_else {
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+/* ------content end----------- */
+
+
+/* -----------javascript toggle----------- */
+
+.colorToggle {
+    color: rgb(3, 208, 255);
+}
+
+
+/* --------------javascript toggle end--------*/
+
+
+/* -------------mobile and PC-------------- */
+
+@media all and (max-device-width:415px) {
+    h1 {
+        color: white;
+        font-size: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    h2 {
+        color: white;
+        font-size: 16px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    h3 {
+        color: white;
+        font-size: 14px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    h4 {
+        color: rgb(202, 203, 202);
+        font-size: 14px;
+        margin-left: 10px;
+        position: fixed;
+    }
+    p {
+        margin-left: 10px;
+        margin-right: 10px;
+        color: white;
+    }
+    aside {
+        display: none;
+    }
+    footer {
+        display: none;
+    }
+    .nav_desktop {
+        display: none;
+    }
+    .nav_mobile {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .about_us_img {
+        display: none;
+    }
+    .length_fix {
+        width: 100%;
+    }
+}
+
+@media all and (min-device-width:416px) {
+    .burger {
+        width: 275px;
+    }
+    i {
+        margin-left: 10px;
+        height: 20px;
+        width: 20px;
+    }
+    .outer, .outer2 {
+        margin-top: 94px;
+    }
+    .nav_mobile {
+        color: white;
+        display: flex;
+        flex-direction: row;
+    }
+    .nav_download_buttons {
+        display: none;
+    }
+    h1, h2, h3, h4, p, a {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    a {
+        margin-bottom: 10px;
+    }
+    h1, h4 {
+        color: white;
+    }
+    main {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-left: 0;
+        color: white;
+    }
+    article {
+        width: 350px;
+        margin-left: 10px;
+        height: 175px;
+    }
+    figure {
+        margin-top: 0;
+        width: 112px;
+        height: 166px;
+    }
+    section {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+    .column_to_row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+
+/* ------------moble and PC end------------- */

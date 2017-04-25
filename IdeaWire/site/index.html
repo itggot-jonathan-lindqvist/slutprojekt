@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Fragrances.com</title>
+    <link href="./css/main.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <div class="burger">
+        <div class="close_burger">
+            <i class="material-icons" onclick="burgermenu()">close</i>
+        </div>
+        <div class="content_burger">
+            <ul>
+                <li><i class="material-icons">home</i>
+                    <a href="./index.html">Start</a></li>
+                <li><i class="material-icons">spa</i>
+                    <a href="./fragrances.html">My Fragrances</a></li>
+                <li><i class="material-icons">file_download</i>
+                    <a href="./download.html">Download</a></li>
+                <li><i class="material-icons">settings</i>
+                    <a href="./settings.html">Settings</a></li>
+                <li><i class="material-icons">people</i>
+                    <a href="./about.html">About Us</a></li>
+                <li><i class="material-icons">help</i>
+                    <a href="./feedback.html">Help & Feedback</a></li>
+            </ul>
+        </div>
+    </div>
+    <nav>
+        <div class="nav_mobile">
+            <img src="./img/ic_menu_white_48px.svg" alt="Meny" class="hmeny" onclick="burgermenu()">
+            <h1>Start</h1>
+        </div>
+    </nav>
+    <div class="outer">
+        <main>
+            <article id="top">
+                <div class="left">
+                    <div class="upper">
+                        <h1>Flowers</h1>
+                        <p>
+                            Flowers that smell. Nice :) YES
+                        </p>
+                    </div>
+                    <div class="lower">
+                        <div class="lower_left">
+                            <p id="likeButtonFlower" onclick="toggleLike(this)">Like</p>
+                        </div>
+                        <div class="lower_right">
+                            <p id="dislikeButtonFlower" onclick="toggleDislike(this)">Dislike</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <img src="./img/flowersfix.jpg" alt="Image of flowers" class="img_article" />
+                </div>
+            </article>
+            <article>
+                <div class="left">
+                    <div class="upper">
+                        <h1>Bacon</h1>
+                        <p>
+                            Bacon bacon bacon BAAAAAAACON
+                        </p>
+                    </div>
+                    <div class="lower">
+                        <div class="lower_left">
+                            <p id="likeButtonBacon" onclick="toggleLike(this)">Like</p>
+                        </div>
+                        <div class="lower_right">
+                            <p id="dislikeButtonBacon" onclick="toggleDislike(this)">Dislike</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <img src="./img/baconfix.jpg" alt="Image of bacon" class="img_article" />
+                </div>
+            </article>
+            <article>
+                <div class="left">
+                    <div class="upper">
+                        <h1>The Sea</h1>
+                        <p>
+                            Ummmmmm OK I guess 0_o
+                        </p>
+                    </div>
+                    <div class="lower">
+                        <div class="lower_left">
+                            <p id="likeButtonSea" onclick="toggleLike(this)">Like</p>
+                        </div>
+                        <div class="lower_right">
+                            <p id="dislikeButtonSea" onclick="toggleDislike(this)">Dislike</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <img src="./img/seafix.jpg" alt="Image of the sea" class="img_article" />
+                </div>
+            </article>
+            <article>
+                <div class="left">
+                    <div class="upper">
+                        <h1>Gas</h1>
+                        <p>
+                            Y tho Y tho Y tho Y tho Y tho Y tho
+                        </p>
+                    </div>
+                    <div class="lower">
+                        <div class="lower_left">
+                            <p id="likeButtonGas" onclick="toggleLike(this)">Like</p>
+                        </div>
+                        <div class="lower_right">
+                            <p id="dislikeButtonGas" onclick="toggleDislike(this)">Dislike</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <img src="./img/gasfix.jpg" alt="Image of Gasoline" class="img_article" />
+                </div>
+            </article>
+            <article id="bot">
+                <div class="left">
+                    <div class="upper">
+                        <h1>Tree</h1>
+                        <p>
+                            I don't even know
+                        </p>
+                    </div>
+                    <div class="lower">
+                        <div class="lower_left">
+                            <p id="likeButtonTree" onclick="toggleLike(this)">Like</p>
+                        </div>
+                        <div class="lower_right">
+                            <p id="dislikeButtonTree" onclick="toggleDislike(this)">Dislike</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <img src="./img/treefix.jpg" alt="Image of a tree" class="img_article" />
+                </div>
+            </article>
+        </main>
+        <aside>
+            <h2>News & Updates</h2>
+            <li><i class="material-icons">http</i>
+                <a href="./error.html">WOW NEWS</a></li>
+            <li><i class="material-icons">http</i>
+                <a href="./error.html">MORE news :)</a></li>
+            <li><i class="material-icons">http</i>
+                <a href="./error.html">BETA v1.2.6 out now</a></li>
+            <li><i class="material-icons">http</i>
+                <a href="./error.html">Dogs?</a></li>
+            <li><i class="material-icons">http</i>
+                <a href="./error.html">Link</a></li>
+            <li><i class="material-icons">http</i>
+                <a href="./error.html">Error</a></li>
+            </ul>
+        </aside>
+    </div>
+    <footer>
+        <div class="footer_box1">
+            <p id="footer_txt">All rights resereved to HURRDURR & CO</p>
+        </div>
+        <div class="footer_box2">
+            <a href="http://www.ansiktsbok.se/"><img src="./img/Twitter-icon-ny.png" alt="Twitter Ikon" class="footer_ikoner"></a>
+            <a href="http://www.ansiktsbok.se/"><img src="./img/facebook-icon-ny.png" alt="Facebook Ikon" class="footer_ikoner"></a>
+            <a href="http://www.ansiktsbok.se/"><img src="./img/YouTube-icon-ny.png" alt="YouTube Ikon" class="footer_ikoner"></a>
+        </div>
+    </footer>
+</body>
+<script src="./js/main.js"></script>
+
+</html>
