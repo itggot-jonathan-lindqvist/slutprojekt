@@ -1,0 +1,23 @@
+*{
+  font-family:Roboto, sans-serif;
+}
+
+html, body{
+  margin: 0px;
+  padding: 0px;
+}
+
+header{
+  margin-top: 0px;
+  padding-top: 0px;
+  color: white;
+  background-color: #166fff;
+  width: 100%;
+}
+
+h1{
+  margin: 0px;
+  padding: 0px;
+  margin-left: 20px;
+  padding-top: 10px;
+}
