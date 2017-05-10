@@ -71,6 +71,12 @@ article {
   height: 130px;
 }
 
+.centerfix {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .dropbtn {
   background-color: #166fff;
   margin-left: 20px;
@@ -83,6 +89,9 @@ article {
   font-size: 16px;
   border: none;
   cursor: pointer;
+  -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75);
 }
 
 .dropbtn:hover, .dropbtn:focus {
@@ -120,3 +129,42 @@ article {
 .show {
   display: block;
 }
+
+.nextback {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nextbtn {
+  font-size: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.bigbtn {
+  font-size: 30px;
+}
+
+
+/*desktop*/
+
+@media all and (min-device-width:416px) {}
+
+
+/*mobil*/
+
+@media all and (max-device-width:361px) {
+  footer {
+    display: none;
+  }
+}
+
+
+/*ipad*/
+
+@media all and (max-device-width:415px) {}
