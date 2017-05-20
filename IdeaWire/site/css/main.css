@@ -1,3 +1,4 @@
+/*standard css*/
 * {
   font-family: Roboto, sans-serif;
 }
@@ -7,6 +8,7 @@ html, body {
   padding: 0px;
 }
 
+/*main och header*/
 main {
   display: flex;
   width: 100vw;
@@ -29,42 +31,12 @@ header {
   align-items: center;
 }
 
-nav{
-  position: fixed;
-  background-color: white;
-  height: 100%;
-  z-index: 2;
-  -webkit-box-shadow: 20px 0px 105px 200px rgba(0,0,0,0.75);
--moz-box-shadow: 20px 0px 105px 200px rgba(0,0,0,0.75);
-box-shadow: 20px 0px 105px 200px rgba(0,0,0,0.75);
-}
-
-ul{
-  margin-right: 60px;
-  list-style-type: none;
-}
-
-li{
-  margin-top: 20px;
-}
-
-#toplink{
-  margin-top: 40px;
-}
-
-.navBackButton{
+.header_left{
   display: flex;
-  justify-content: flex-end;
   align-items: center;
-  height: 64px;
 }
 
-#blackButton{
-  color: black;
-  margin-right: 20px;
-  font-size: 35px;
-}
-
+/*text fixande (och bild)*/
 h1, p, h2 {
   margin: 0px;
   padding: 0px;
@@ -89,6 +61,7 @@ i {
   margin-left: 10px;
 }
 
+/*Självaste innehållet*/
 .steps {
   margin-top: 85px;
 }
@@ -113,7 +86,7 @@ article {
   align-items: center;
 }
 
-#step3{
+#step3 {
   width: auto;
   margin-right: 20px;
 }
@@ -191,11 +164,61 @@ article {
   font-size: 30px;
 }
 
+/*Naven*/
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
 
 /*desktop*/
 
 @media all and (min-device-width:416px) {}
 
+
+/*ipad*/
+
+@media all and (max-device-width:769px)(min-device-width:362px) {
+  .steps{
+    display: none;
+  }
+
+  img{
+    height: 75px;
+  }
+
+
+
+}
 
 /*mobil*/
 
@@ -203,9 +226,12 @@ article {
   footer {
     display: none;
   }
+  .steps{
+    display: block;
+  }
+
+  .header_right{
+    display: none;
+  }
+
 }
-
-
-/*ipad*/
-
-@media all and (max-device-width:415px) {}

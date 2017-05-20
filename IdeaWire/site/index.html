@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -10,21 +11,24 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <nav>
-  <div class="navBackButton">
-    <i class="material-icons" id="blackButton">keyboard_arrow_left</i>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
   </div>
-  <ul>
-    <li><h1>Länk</h1></li>
-    <li><h1>Länk</h1></li>
-    <li><h1>Länk</h1></li>
-    <li><h1>Länk</h1></li>
-    <li><h1>Länk</h1></li>
-  </ul>
 </nav>
+
 <body>
   <header>
-    <i class="material-icons">menu</i>
-    <img src="./img/logo_crop.png" alt="logo" />
+    <div class="header_left">
+      <span onclick="openNav()"><i class="material-icons">menu</i></span>
+      <img src="./img/logo_crop.png" alt="logo" />
+    </div>
+    <div class="header_right">
+      
+    </div>
   </header>
   <main>
     <div class="steps">

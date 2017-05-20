@@ -11,11 +11,18 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <nav>
-
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </div>
 </nav>
+
 <body>
   <header>
-    <i class="material-icons">menu</i>
+    <span onclick="openNav()"><i class="material-icons">menu</i></span>
     <img src="./img/logo_crop.png" alt="logo" />
   </header>
   <main>
