@@ -4,11 +4,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Titel</title>
+  <title>IdeaWire</title>
   <link href="./css/main.css" rel="stylesheet" />
-  <link rel="shortcut icon" href="" />
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
 </head>
 <nav>
   <div id="mySidenav" class="sidenav">
@@ -27,7 +28,11 @@
       <img src="./img/logo_crop.png" alt="logo" />
     </div>
     <div class="header_right">
-      <i class="material-icons">search</i>
+      <div id="wrap">
+        <form action="">
+          <input id="search" name="search" type="text" placeholder="What subject are you looking for?"><i class="material-icons">search</i><input id="search_submit" value="Rechercher" type="submit">
+        </form>
+      </div>
     </div>
   </header>
   <main>
@@ -127,10 +132,10 @@
     </div>
     <div class="content">
       <h1>Welcome!</h1>
+      <h2 class="marginLeft">Please select the follow areas your idea can be within</h2>
       <div class="selector">
-        <h2>Please select the follow areas your idea can be within</h2>
         <div class="subject">
-          <p>
+          <p class="noMarginTop">
             History
           </p>
           <label class="switch">
@@ -139,8 +144,8 @@
         </label>
         </div>
         <div class="subject">
-          <p>
-            History
+          <p class="noMarginTop">
+            Gaming
           </p>
           <label class="switch">
           <input type="checkbox">
@@ -148,8 +153,107 @@
         </label>
         </div>
         <div class="subject">
-          <p>
-            History
+          <p class="noMarginTop">
+            Wildlife
+          </p>
+          <label class="switch">
+          <input type="checkbox">
+          <div class="slider round"></div>
+        </label>
+        </div>
+        <div class="subject">
+          <p class="noMarginTop">
+            Nuclear Power
+          </p>
+          <label class="switch">
+          <input type="checkbox">
+          <div class="slider round"></div>
+        </label>
+        </div>
+        <div class="subject">
+          <p class="noMarginTop">
+            Future
+          </p>
+          <label class="switch">
+            <input type="checkbox">
+          <div class="slider round"></div>
+          </label>
+        </div>
+        <div class="subject">
+          <p class="noMarginTop">
+            Politics
+          </p>
+          <label class="switch">
+          <input type="checkbox">
+          <div class="slider round"></div>
+        </label>
+        </div>
+        <div class="subject">
+          <p class="noMarginTop">
+            Peace
+          </p>
+          <label class="switch">
+          <input type="checkbox">
+          <div class="slider round"></div>
+        </label>
+        </div>
+        <div class="subject">
+          <p class="noMarginTop">
+            War
+          </p>
+          <label class="switch">
+          <input type="checkbox">
+          <div class="slider round"></div>
+        </label>
+        </div>
+        <div class="subject">
+          <p class="noMarginTop">
+            Fantasy
+          </p>
+          <label class="switch">
+          <input type="checkbox">
+          <div class="slider round"></div>
+        </label>
+        </div>
+        <div class="subject">
+          <p class="noMarginTop">
+            Culture
+          </p>
+          <label class="switch">
+          <input type="checkbox">
+          <div class="slider round"></div>
+        </label>
+        </div>
+        <div class="subject">
+          <p class="noMarginTop">
+            Math
+          </p>
+          <label class="switch">
+          <input type="checkbox">
+          <div class="slider round"></div>
+        </label>
+        </div>
+        <div class="subject">
+          <p class="noMarginTop">
+            Football
+          </p>
+          <label class="switch">
+          <input type="checkbox">
+          <div class="slider round"></div>
+        </label>
+        </div>
+        <div class="subject">
+          <p class="noMarginTop">
+            Hockey
+          </p>
+          <label class="switch">
+          <input type="checkbox">
+          <div class="slider round"></div>
+        </label>
+        </div>
+        <div class="subject">
+          <p class="noMarginTop">
+            The Internet
           </p>
           <label class="switch">
           <input type="checkbox">
@@ -157,7 +261,9 @@
         </label>
         </div>
       </div>
+      <a href="./error.html"><button class="dropbtn bigbtn">GENERATE IDEA</button></a>
     </div>
+
     <div class="buffer">
 
     </div>
@@ -169,5 +275,6 @@
   </footer>
 </body>
 <script src="./js/main.js"></script>
+<script src="./js/jquery-3.2.1.js"></script>
 
 </html>

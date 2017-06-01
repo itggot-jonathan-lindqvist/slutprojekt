@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Titel</title>
+  <title>IdeaWire</title>
   <link href="./css/main.css" rel="stylesheet" />
   <link rel="shortcut icon" href="" />
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -27,16 +27,30 @@
   </header>
   <main>
     <div class="steps">
-      <h1>Step 2</h1>
+      <h1 id="stepsCount2">Step 2</h1>
+      <h1 class="hide" id="stepsCount3">Step 3</h1>
     </div>
     <div class="instructions">
-      <article class="centerfix">
-        <a href="./step3.html"><button class="dropbtn bigbtn">GENERATE IDEA</button></a>
-      </article>
+      <div class="step2" id="myStep2">
+        <article class="centerfix">
+          <button onclick="randomIdea()" class="dropbtn bigbtn">GENERATE IDEA</button>
+        </article>
+      </div>
+      <div class="step3" id="myStep3">
+        <h2>Your idea is the following;</h2>
+        <article class="centerfix" id="step3">
+          <h1 class="noMarginLeft removeContent" id="randomProduct"></h1>
+        </article>
+      </div>
     </div>
     <div class="nextback">
       <div class="back">
-        <a href="./index.html"><button class="dropbtn nextbtn">Back</button></a>
+        <div class="backBTNstep2" id="backBTNstep2ID">
+          <a href="./index.html"><button class="dropbtn nextbtn">Back</button></a>
+        </div>
+        <div class="backBTNstep3" id="backBTNstep3ID">
+          <button onclick="showStep2()" class="dropbtn nextbtn">Back</button>
+        </div>
       </div>
       <div class="next">
       </div>
@@ -47,5 +61,6 @@
   </footer>
 </body>
 <script src="./js/main.js"></script>
+<script src="./js/jquery-3.2.1.js"></script>
 
 </html>
