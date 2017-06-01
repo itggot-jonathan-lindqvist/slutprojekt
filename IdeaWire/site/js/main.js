@@ -51,6 +51,8 @@ function randomIdea() {
 
   var text = document.createTextNode(resultat);
   variabel.appendChild(text);
+
+  document.getElementById("removeClass").classList.remove("back")
 }
 
 function showStep2() {
@@ -63,6 +65,7 @@ function showStep2() {
   document.getElementById("backBTNstep2ID").classList.remove("hide")
   document.getElementById("backBTNstep3ID").classList.remove("show")
 
+  document.getElementById("removeClass").classList.add("back")
 
   $(".removeContent").empty();
 }

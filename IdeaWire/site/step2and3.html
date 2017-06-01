@@ -6,21 +6,24 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>IdeaWire</title>
   <link href="./css/main.css" rel="stylesheet" />
-  <link rel="shortcut icon" href="" />
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
-<nav>
-  <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
-  </div>
-</nav>
 
 <body>
+
+  <nav>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+
   <header>
     <span onclick="openNav()"><i class="material-icons">menu</i></span>
     <img src="./img/logo_crop.png" alt="logo" />
@@ -44,9 +47,9 @@
       </div>
     </div>
     <div class="nextback" id="step2and3NB">
-      <div class="back">
+      <div class="back" id="removeClass">
         <div class="backBTNstep2" id="backBTNstep2ID">
-          <a href="./index.html"><button class="dropbtn nextbtn">Back</button></a>
+          <a href="./index.html" class="dropbtn nextbtn">Back</a>
         </div>
         <div class="backBTNstep3" id="backBTNstep3ID">
           <button onclick="showStep2()" class="dropbtn nextbtn">Back</button>
@@ -54,8 +57,9 @@
       </div>
     </div>
   </main>
+  <script src="./js/main.js"></script>
+  <script src="./js/jquery-3.2.1.js"></script>
 </body>
-<script src="./js/main.js"></script>
-<script src="./js/jquery-3.2.1.js"></script>
+
 
 </html>

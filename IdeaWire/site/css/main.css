@@ -49,18 +49,28 @@ header {
 
 /*text fixande (och bild)*/
 
-h1, p, h2 {
-  margin: 0px;
-  padding: 0px;
+
+/*skriver såhär "utspritt" för att får annars errors*/
+
+h1 {
   margin-left: 20px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 h2 {
-  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0px;
   font-size: 15px;
+  margin-left: 20px;
 }
 
 p {
+  margin-left: 20px;
+  margin-bottom: 0px;
   margin-right: 20px;
   margin-top: 10px;
 }
@@ -71,10 +81,6 @@ img {
 
 i {
   margin-left: 10px;
-}
-
-.iconsFix {
-  font-size: 48px !important;
 }
 
 
@@ -129,7 +135,6 @@ i {
   height: 30px;
   float: right;
   padding: 0;
-  position: relative;
   color: white;
 }
 
@@ -137,13 +142,14 @@ input[type="text"] {
   height: 30px;
   font-size: 25px;
   display: inline-block;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   color: white;
   font-weight: 100;
   border: none;
   outline: none;
-  color: white;
-  padding: 3px;
+  padding-left: 3px;
+  padding-top: 3px;
+  padding-bottom: 3px;
   padding-right: 30px;
   width: 0px;
   position: absolute;
@@ -325,14 +331,20 @@ article {
   justify-content: flex-start;
 }
 
+.next, .back {
+  margin-bottom: 20px;
+}
+
 .nextbtn {
   font-size: 20px;
   padding-left: 30px;
   padding-right: 30px;
+  text-decoration: none;
 }
 
 .bigbtn {
   font-size: 30px;
+  text-decoration: none;
 }
 
 
@@ -394,13 +406,11 @@ article {
 }
 
 .selector {
-  margin-left: 20px;
-  margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   height: 100%;
-  margin-bottom: 20px;
+  margin: 20px;
 }
 
 .subject {
@@ -409,64 +419,127 @@ article {
   align-items: center;
   justify-content: space-between;
   margin-top: 20px;
-  width: 200px;
+  width: 220px;
 }
+
+
+/*switcharna/knapparna för desktopen*/
 
 .switch {
   position: relative;
-  display: inline-block;
-  width: 30px;
-  height: 16.5px;
-}
-
-.switch input {
-  display: none;
-}
-
-.slider {
-  position: absolute;
+  display: block;
+  vertical-align: top;
+  width: 100px;
+  height: 30px;
+  padding: 3px;
+  background: linear-gradient(to bottom, #eeeeee, #FFFFFF 25px);
+  background-image: -webkit-linear-gradient(top, #eeeeee, #FFFFFF 25px);
+  border-radius: 18px;
+  box-shadow: inset 0 -1px white, inset 0 1px 1px rgba(0, 0, 0, 0.05);
   cursor: pointer;
+  box-sizing: content-box;
+}
+
+.switch-input {
+  position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+  opacity: 0;
+  box-sizing: content-box;
 }
 
-.slider:before {
+.switch-label {
+  position: relative;
+  display: block;
+  height: inherit;
+  font-size: 10px;
+  text-transform: uppercase;
+  background: #eceeef;
+  border-radius: inherit;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.15);
+  box-sizing: content-box;
+}
+
+.switch-label:before, .switch-label:after {
   position: absolute;
+  top: 50%;
+  margin-top: -.5em;
+  line-height: 1;
+  -webkit-transition: inherit;
+  -moz-transition: inherit;
+  -o-transition: inherit;
+  transition: inherit;
+  box-sizing: content-box;
+}
+
+.switch-label:before {
+  content: attr(data-off);
+  right: 11px;
+  color: #aaaaaa;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.switch-label:after {
+  content: attr(data-on);
+  left: 11px;
+  color: #FFFFFF;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+}
+
+.switch-input:checked~.switch-label {
+  background: #166fff;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.switch-input:checked~.switch-label:before {
+  opacity: 0;
+}
+
+.switch-input:checked~.switch-label:after {
+  opacity: 1;
+}
+
+.switch-handle {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 28px;
+  height: 28px;
+  background: linear-gradient(to bottom, #FFFFFF 40%, #f0f0f0);
+  background-image: -webkit-linear-gradient(top, #FFFFFF 40%, #f0f0f0);
+  border-radius: 100%;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.switch-handle:before {
   content: "";
-  height: 13px;
-  width: 13px;
-  left: 2px;
-  bottom: 2px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -6px 0 0 -6px;
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(to bottom, #eeeeee, #FFFFFF);
+  background-image: -webkit-linear-gradient(top, #eeeeee, #FFFFFF);
+  border-radius: 6px;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.02);
 }
 
-input:checked+.slider {
-  background-color: #2196F3;
+.switch-input:checked~.switch-handle {
+  left: 74px;
+  box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
 }
 
-input:focus+.slider {
-  box-shadow: 0 0 1px #2196F3;
-}
 
-input:checked+.slider:before {
-  -webkit-transform: translateX(13px);
-  -ms-transform: translateX(13px);
-  transform: translateX(13px);
-}
+/* Transition
+========================== */
 
-.slider.round {
-  border-radius: 16.5px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
+.switch-label, .switch-handle {
+  transition: All 0.3s ease;
+  -webkit-transition: All 0.3s ease;
+  -moz-transition: All 0.3s ease;
+  -o-transition: All 0.3s ease;
 }
 
 
@@ -530,6 +603,8 @@ footer {
   .dropbtn {
     margin-bottom: 100px;
     border-radius: 50px;
+    margin-left: auto;
+    margin-right: auto;
   }
   a {
     margin: auto;
