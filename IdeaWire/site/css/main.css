@@ -9,7 +9,6 @@ html, body {
   padding: 0px;
 }
 
-
 /*main och header*/
 
 main {
@@ -50,29 +49,17 @@ header {
 /*text fixande (och bild)*/
 
 
-/*skriver såhär "utspritt" för att får annars errors*/
-
-h1 {
-  margin-left: 20px;
-  margin-right: 0px;
-  margin-top: 0px;
-  margin-bottom: 0px;
+h1, h2 {
+  margin: 0px 0px 0px 20px;
 }
 
 h2 {
-  margin-right: 0px;
-  margin-top: 0px;
-  margin-bottom: 0px;
   padding: 0px;
   font-size: 15px;
-  margin-left: 20px;
 }
 
 p {
-  margin-left: 20px;
-  margin-bottom: 0px;
-  margin-right: 20px;
-  margin-top: 10px;
+  margin: 10px 20px 0px 20px;
 }
 
 img {
@@ -147,10 +134,7 @@ input[type="text"] {
   font-weight: 100;
   border: none;
   outline: none;
-  padding-left: 3px;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  padding-right: 30px;
+  padding: 3px 30px 3px 3px;
   width: 0px;
   position: absolute;
   top: 0;
@@ -259,10 +243,7 @@ article {
 
 .dropbtn {
   background-color: #166fff;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 10px 20px 10px 20px;
   border-radius: 2px;
   color: white;
   padding: 15px;
@@ -365,10 +346,8 @@ article {
 }
 
 .card {
-  margin-left: 20px;
-  margin-right: 20px;
   font-size: 25px;
-  margin-top: 20px;
+  margin: 20px 20px 0px 20px;
   background-color: #166fff;
   color: white;
   padding: 20px;
@@ -378,6 +357,7 @@ article {
   border-radius: 2px;
 }
 
+/*Olika margin classer/ids för att fixa olika delar på sidan*/
 .noMarginTop, #bottomRow {
   margin-top: 0;
 }
@@ -388,6 +368,14 @@ article {
 
 .noMarginLeft {
   margin-left: 0px;
+}
+
+.marginTop{
+  margin-top: 10px;
+}
+
+.marginBottomFix{
+  margin-bottom: 5px;
 }
 
 

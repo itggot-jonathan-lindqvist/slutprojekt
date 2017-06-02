@@ -14,51 +14,59 @@
 
 <body>
 
+  <!-- Naven: Detta är menyn (innehållet) som kommer ut om man trycker på hambrugar knappen -->
   <nav>
     <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="material-icons">close</i></a>
       <a href="#">About</a>
       <a href="#">Services</a>
       <a href="#">Clients</a>
       <a href="#">Contact</a>
     </div>
   </nav>
-
+  <!-- Headern: Denna headern jämfört med den första (index) är annorlunda för bara mobilen kan ta sig hit -->
   <header>
     <span onclick="openNav()"><i class="material-icons">menu</i></span>
     <img src="./img/logo_crop.png" alt="logo" />
   </header>
+  <!-- main: allt innehåll för denna specefika sidan -->
   <main>
+    <!-- steps: oilka steps:n för att hjälpa användaren navigera. Step 2 och 3 ändras med JS -->
     <div class="steps">
       <h1 id="stepsCount2">Step 2</h1>
       <h1 class="hide" id="stepsCount3">Step 3</h1>
     </div>
+    <!-- Instructions: Olika delarna för step 2 och 3 -->
     <div class="instructions">
+      <!-- Step2: Är det första man ser, har knappen. Gömms sedan för användaren -->
       <div class="step2" id="myStep2">
         <article class="centerfix">
           <button onclick="randomIdea()" class="dropbtn bigbtn">GENERATE IDEA</button>
         </article>
       </div>
+      <!-- step3: Detta kommer synas efter man tryckt på knappen -->
       <div class="step3" id="myStep3">
-        <h2>Your idea is the following;</h2>
+        <h2 class="noMarginLeft marginTop">Your idea is the following;</h2>
         <article class="centerfix" id="step3">
           <h1 class="noMarginLeft removeContent" id="randomProduct"></h1>
         </article>
       </div>
     </div>
+    <!-- nextback: Är tillbaka knapparna och beroend på om det är step2 eller 3 -->
     <div class="nextback" id="step2and3NB">
       <div class="back" id="removeClass">
         <div class="backBTNstep2" id="backBTNstep2ID">
           <a href="./index.html" class="dropbtn nextbtn">Back</a>
         </div>
         <div class="backBTNstep3" id="backBTNstep3ID">
-          <button onclick="showStep2()" class="dropbtn nextbtn">Back</button>
+          <button onclick="showStep2()" class="dropbtn nextbtn marginBottomFix">Back</button>
         </div>
       </div>
     </div>
   </main>
   <script src="./js/main.js"></script>
-  <script src="./js/jquery-3.2.1.js"></script>
+  <script src="./js/jquery-3.2.1.min.js"></script>
+
 </body>
 
 
