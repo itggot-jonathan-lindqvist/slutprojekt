@@ -9,6 +9,7 @@ html, body {
   padding: 0px;
 }
 
+
 /*main och header*/
 
 main {
@@ -47,7 +48,6 @@ header {
 
 
 /*text fixande (och bild)*/
-
 
 h1, h2 {
   margin: 0px 0px 0px 20px;
@@ -357,7 +357,9 @@ article {
   border-radius: 2px;
 }
 
+
 /*Olika margin classer/ids för att fixa olika delar på sidan*/
+
 .noMarginTop, #bottomRow {
   margin-top: 0;
 }
@@ -370,12 +372,18 @@ article {
   margin-left: 0px;
 }
 
-.marginTop{
+.marginTop {
   margin-top: 10px;
 }
 
-.marginBottomFix{
+.marginBottomFix {
   margin-bottom: 5px;
+}
+
+#aboutFix {
+  margin: 0px 450px 0px 450px;
+  height: 100vh;
+  width: auto;
 }
 
 
@@ -548,12 +556,13 @@ footer {
 
 /*error sidan*/
 
-#errorBody {
+.errorBody {
   height: 100vh;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .error {
@@ -631,6 +640,13 @@ footer {
   input[type="text"] {
     height: 40px;
   }
+  .error {
+    font-size: 48px;
+  }
+  #aboutFix {
+    margin: 0px 150px 0px 150px;
+    font-size: 24px;
+  }
 }
 
 
@@ -664,5 +680,12 @@ footer {
   .sidenav a {
     font-size: 25px;
     margin-top: 20px;
+  }
+  .error {
+    font-size: 20px;
+  }
+  #aboutFix {
+    margin: 0px 50px 0px 50px;
+    font-size: 14px;
   }
 }
